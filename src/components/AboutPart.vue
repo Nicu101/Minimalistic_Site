@@ -34,6 +34,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@import '../styles/aboutUs.css';
+
 @font-face {
 	font-family: Rubik;
 	src: url("../assets/fonts/Rubik-Regular.ttf");
@@ -48,6 +50,4 @@ export default {
 
     mix-blend-mode: normal;
 }
-
-@import '../styles/aboutUs.css'
 </style>

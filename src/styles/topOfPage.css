@@ -4,6 +4,7 @@
 	height: 50px;
 	margin-top: 50px;
 	margin-left: 240px;
+
 	fill: Solid #FFFFFF;
 }
 
@@ -30,6 +31,7 @@
 	letter-spacing: 5%;
 	align-content: center;
 	vertical-align: center;
+
 	color: #FFFFFF;
 	border: none;
 	background: none;
@@ -51,6 +53,7 @@
 	letter-spacing: 5%;
 	align-content: center;
 	vertical-align: center;
+
 	color: #FFFFFF;
 	border: none;
 	background: none;
@@ -72,6 +75,7 @@
 	letter-spacing: 5%;
 	align-content: center;
 	vertical-align: center;
+
 	color: #FFFFFF;
 	border: none;
 	background: none;
@@ -93,6 +97,7 @@
 	letter-spacing: 1.5px;
 	align-content: center;
 	vertical-align: center;
+
 	color: #FFFFFF;
 	background-color: #EE4D47;
 	fill: Solid #EE4D47;
@@ -115,6 +120,7 @@
 	line-height: 100%;
 	align-content: Left;
 	vertical-align: center;
+
 	fill: Solid #FFFFFF;
 }
 
@@ -124,6 +130,7 @@
 	position: relative;
 	margin-top: 550px;
 	margin-left: 240px;
+	
 	color: #FFFFFF;
 	background-color: #EE4D47;
 	fill: Solid #EE4D47;

@@ -27,11 +27,17 @@
 <script>
 export default {
 	name: 'TopOfPage',
+	mounted() {
+		//console.log(window.scrollY);
+	}
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@import '../styles/topOfPage.css';
+
 @font-face {
 	font-family: DmSerifDisplay;
 	src: url("../assets/fonts/DMSerifDisplay-Regular.ttf");
@@ -42,15 +48,14 @@ export default {
 }
 
 .top {
+	position: absolute;
 	width: 1734px;
 	height: 1005.12px;
-	position: absolute;
 	margin-top: -14px;
 	margin-left: -8px;
-	mix-blend-mode: color;
+
+	mix-blend-mode: normal;
 	background-image: url("../assets/top/topBackgroundImg.png");
 	background-repeat: no-repeat;
 }
-
-@import '../styles/topOfPage.css'
 </style>
