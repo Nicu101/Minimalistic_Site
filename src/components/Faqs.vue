@@ -1,7 +1,7 @@
  <template>
 	<div class="faqsClass">
         <div class="faqsImgClass">
-			<img src="../assets/howTo/illustrations.png"/>
+			<img src="../assets/faqs/Group14.png"/>
 		</div>
         <div>
             <p class="faqsTitleClass">
@@ -27,10 +27,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /* @import '../styles/howTo.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 
 @font-face {
-	font-family: Rubik;
-	src: url("../assets/fonts/Rubik-Regular.ttf");
+	font-family: DmSerifDisplay;
+	src: url("../assets/fonts/DMSerifDisplay-Regular.ttf");
 }
 
 .faqsClass {
@@ -54,4 +55,38 @@ export default {
     margin-left: 475px;
     margin-top: 107.65px;
 }
+
+.faqsTitleClass {
+    position: absolute;
+    width: 166px;
+    height: 50px;
+    margin-top: 224px;
+    /* text */
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+
+    color: #EE4D47;
+}
+
+.faqsTextClass {
+    position: absolute;
+    width: 550px;
+    height: 200px;
+    margin-top: 318.16px;
+    /* text */
+    font-family: DmSerifDisplay;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 140%;
+
+    color: #402B2B;
+}
+
 </style>
