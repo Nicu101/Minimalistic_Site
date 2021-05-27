@@ -3,6 +3,8 @@
     <TopOfPage/>
     <AboutPart/>
     <HowToPart/>
+    <Faqs/>
+    <Footer/>
   </div>
 </template>
 
@@ -10,6 +12,8 @@
 import TopOfPage from './components/TopOfPage.vue'
 import AboutPart from './components/AboutPart.vue'
 import HowToPart from './components/HowToPart.vue'
+import Faqs from './components/Faqs.vue'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
@@ -17,6 +21,8 @@ export default {
     TopOfPage,
     AboutPart,
     HowToPart,
+    Faqs,
+    Footer
   }
 }
 </script>
