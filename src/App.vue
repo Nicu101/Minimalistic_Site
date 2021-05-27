@@ -2,18 +2,21 @@
   <div id="app">
     <TopOfPage/>
     <AboutPart/>
+    <HowToPart/>
   </div>
 </template>
 
 <script>
 import TopOfPage from './components/TopOfPage.vue'
 import AboutPart from './components/AboutPart.vue'
+import HowToPart from './components/HowToPart.vue'
 
 export default {
   name: 'App',
   components: {
     TopOfPage,
     AboutPart,
+    HowToPart,
   }
 }
 </script>
