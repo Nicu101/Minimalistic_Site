@@ -28,6 +28,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@import '../styles/howTo.css';
+
 @font-face {
 	font-family: Rubik;
 	src: url("../assets/fonts/Rubik-Regular.ttf");
@@ -42,47 +44,4 @@ export default {
 
     mix-blend-mode: normal;
 }
-
-.howToImg {
-    position: absolute;
-    width: 720.52px;
-    height: 679.39px;
-}
-
-.howToTitle {
-    position: absolute;
-    width: 265px;
-    height: 50px;
-    margin-left: 777.61px;
-    margin-top: 96.19px;
-    /* text */
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-
-    color: #EE4D47;
-}
-
-.howToText {
-    position: absolute;
-    width: 455px;
-    height: 287px;
-    margin-left: 777.61px;
-    margin-top: 186.19px;
-    /* text */
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 40px;
-
-    color: #402B2B;
-}
-
 </style>
