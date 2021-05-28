@@ -4,16 +4,16 @@
 			<img src="../assets/top/topLogoImg.png"/>
 		</div>
 		<div class="topMenuBar">
-			<button class="aboutMenuBtn"> ABOUT </button>
-			<button class="howToMenuBtn"> HOW TO </button>
-			<button class="faqsMenuBtn"> FAQS </button>
-			<button class="contactMenuBtn"> CONTACT US </button>
+			<button class="aboutMenuBtn" @click="goto('about')"> ABOUT </button>
+			<button class="howToMenuBtn" @click="goto('howToApply')"> HOW TO </button>
+			<button class="faqsMenuBtn" @click="goto('faqs')"> FAQS </button>
+			<button class="contactMenuBtn" @click="goto('footer')"> CONTACT US </button>
 		</div>
 		<div>
 			<p class="topTextBox"> Your awesome traffic permit consultant.</p>
 		</div>
 		<div>
-			<button class="GetStartedBtn">
+			<button class="GetStartedBtn" @click="goto('footer')">
 				<span class="GetStartedBtnText"> GET STARTED </span> 
 				<img class="GetStartedBtnImg" src="../assets/top/union.png"/>
 			</button>
@@ -27,8 +27,10 @@
 <script>
 export default {
 	name: 'TopOfPage',
-	mounted() {
-		//console.log(window.scrollY);
+	methods: {
+		goto(refName) {
+			this.$emit('goto', refName);
+		}
 	}
 
 }

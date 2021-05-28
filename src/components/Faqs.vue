@@ -1,5 +1,5 @@
  <template>
-	<div class="faqsClass">
+	<div class="faqsClass" ref="faqs">
         <div class="faqsImgClass">
 			<img src="../assets/faqs/Group14.png"/>
 		</div>
@@ -18,9 +18,9 @@
 export default {
 	name: 'Faqs',
 	mounted() {
-		//console.log(window.scrollY);
+        // Send the reference to the parent
+        this.$emit('reference', 'faqs', this.$refs['faqs']);
 	}
-
 }
 </script>
 

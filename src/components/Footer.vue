@@ -1,5 +1,5 @@
  <template>
-	<div class="footerClass">
+	<div class="footerClass" ref="footer">
         <img class="backgroundImgClass" src="../assets/footer/Vector13.png"/>
         <div class="footerImgBoxClass">
             <img class="trekmobilBackgroundImg1" src="../assets/footer/Vector.png"/>
@@ -25,9 +25,9 @@
 
         <img class="footerLogoClass" src="../assets/footer/logoFooter.png"/>
         <div class="footerMenuBarClass">
-			<button class="aboutMenuBtnClass"> ABOUT </button>
-			<button class="howToMenuBtnClass"> HOW TO </button>
-			<button class="faqsMenuBtnClass"> FAQS </button>
+			<button class="aboutMenuBtnClass" @click="goto('about')"> ABOUT </button>
+			<button class="howToMenuBtnClass" @click="goto('howToApply')"> HOW TO </button>
+			<button class="faqsMenuBtnClass" @click="goto('faqs')"> FAQS </button>
 		</div>
         <p class="footerNoteClass">Copyright @ 2019</p>
         <div class="footerSocialLinksClass">
@@ -48,7 +48,8 @@
 export default {
 	name: 'Footer',
 	mounted() {
-		//console.log(window.scrollY);
+		// Send the reference to the parent
+        this.$emit('reference', 'footer', this.$refs['footer']);
 	},
     data: function() {
         return {
@@ -59,6 +60,10 @@ export default {
     methods: {
         getStarted() {
             //do somenthing?
+            alert("Nothings can be done this way!");
+        },
+        goto(refName) {
+            this.$emit('goto', refName);
         }
     }
 }

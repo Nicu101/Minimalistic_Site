@@ -1,5 +1,5 @@
  <template>
-	<div class="howTo">
+	<div class="howTo" ref="howToApply">
         <div class="howToImg">
 			<img src="../assets/howTo/illustrations.png"/>
 		</div>
@@ -20,7 +20,8 @@
 export default {
 	name: 'HowToPart',
 	mounted() {
-		//console.log(window.scrollY);
+        // Send the reference to the parent
+		this.$emit('reference', 'howToApply', this.$refs['howToApply']);
 	}
 
 }
