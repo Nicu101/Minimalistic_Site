@@ -104,6 +104,9 @@
 	border: none;
 	border-radius: 5px;
 }
+.contactMenuBtn:hover {
+	background-color: #ce251f;
+}
 
 .topTextBox {
 	position: absolute;
@@ -137,6 +140,9 @@
 	border: none;
 	border-radius: 5px;
 }
+.GetStartedBtn:hover {
+	background-color: #ce251f;
+}
 
 .GetStartedBtnText {
 	font-family: Rubik;
@@ -158,9 +164,6 @@
 	motion-rotation: 0deg;
 }
 
-.modelTopCar {
-	width: 650px;
-	height: 430.46px;
+.modelTopCar {	
 	margin-top: 180.81px;
-	margin-left: -40px;
 }
