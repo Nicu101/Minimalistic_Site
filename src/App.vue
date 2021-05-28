@@ -30,5 +30,6 @@ export default {
 <style>
 #app {
   background-color: #E5E5E5;
+  
 }
 </style>
