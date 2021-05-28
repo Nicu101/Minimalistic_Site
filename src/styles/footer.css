@@ -1,0 +1,313 @@
+/***** Treckmobil and his Surroundings *****/
+.footerImgBoxClass {
+    position: absolute;
+    width: 489.2px;
+    height: 209.48px;
+}
+
+.trekmobilBackgroundImg1 {
+    position: absolute;
+    width: 189.48px;
+    height: 94.38px;
+    margin-left: 299.72px; /* 186.72px; */
+    margin-top: 93.23px;
+}
+
+.trekmobilBackgroundImg2 {
+    position: absolute;
+    width: 131.03px;
+    height: 93.23px;
+    margin-left: 105px;
+    margin-top: 112.8px;
+}
+
+.treckmobilImgClass {
+    position: absolute;
+    margin-left: 113px;
+}
+/***** Form box *****/ 
+.footerBoxClass {
+    position: absolute;
+    width: 1025px;
+    height: 440px;
+    margin-left: 348px;
+    margin-top: 49.82px;
+}
+
+.footerTextHighliterImgClass {
+    position: absolute;
+    width: 10px;
+    height: 160px;
+    margin-top: 210px;
+}
+
+.footerFormTextClass {
+    position: absolute;
+    width: 330px;
+    height: 140px;
+    margin-top: 220px;
+    margin-left: 50px;
+    /* text */
+    font-family: RubikNormal;
+    font-style: 330px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.footerFormBoxClass {
+    position: absolute;
+    width: 550px;
+    height: 440px;
+    margin-left: 475px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px
+        rgba(238, 77, 71, 0.1);
+    border-radius: 10px;
+}
+
+.footerFormNameClass {
+    position: absolute;
+    width: 95px;
+    height: 38px;
+    margin-left: 75px;
+    margin-top: 52px;
+    /* text */
+    font-family: RubikNormal;
+    font-style: normal;
+    font-weight: 50;
+    font-size: 16px;
+    line-height: 40px;
+
+    color: #402B2B;
+}
+
+.footerFormNameInputClass {
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    margin-left: 75px;
+    margin-top: 100px;
+    /* input box */
+    background: #FFFFFF;
+    border: 2px solid #EE4d47;
+    box-sizing: border-box;
+    box-shadow: 0px 20px 40px 0px rgba(238, 77, 71, 0.1);
+    border-radius: 5px;
+    /* text */
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 11px 40px;
+
+    color: #402B2B;
+}
+
+.footerFormEmailClass {
+    position: absolute;
+    width: 189px;
+    height: 38px;
+    margin-left: 75px;
+    margin-top: 190px;
+    /* text */
+    font-family: RubikNormal;
+    font-style: normal;
+    font-weight: 300px;
+    font-size: 16px;
+    line-height: 40px;
+
+    color: #402B2B;
+}
+
+.footerFormEmailInputClass {
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    margin-left: 75px;
+    margin-top: 238px;
+    /* input box */
+    background: #FFFFFF;
+    border: 1px solid rgba(238, 77, 71, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    /* text */
+    font-family: RubikNormal;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 11px 40px;
+
+    color: #402B2B;
+}
+/*** Get Started button ***/
+.footerGetStartedBtnClass {
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    margin-left: 550px;
+    margin-top: 328px;
+
+    color: #FFFFFF;
+    background-color: #EE4D47;
+    border: none;
+	border-radius: 5px;
+}
+.footerGetStartedBtnClass:hover {
+    background-color: #ce251f;
+}
+
+.GetStartedBtnTextClass {
+    width: 120px;
+    height: 19px;
+    margin-left: 23px;
+    margin-top: 18px;
+    /* text */
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: rgba(238, 77, 71, 0.1);
+
+    color: #FFFFFF;
+}
+
+.GetStartedBtnImgClass {
+    position: absolute;
+    width: 29.5px;
+    height: 12.35px;
+    margin-left: 56px;
+    margin-top: -33px;
+}
+/*** Img Logo ***/
+.footerLogoClass {
+    position: absolute;
+    margin-left: 348px;
+    margin-top: 659px
+}
+/***** Footer Menu *****/
+.footerMenuBarClass{
+    position: absolute;
+    width: 368px;
+    height: 19px;
+    margin-left: 999px;
+    margin-top: 670px
+}
+
+.aboutMenuBtnClass {
+    position: absolute;
+    width: 56px;
+    height: 19px;
+	/* Text properties */
+	font-family: Rubik;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 19px;
+	display: flex;
+    align-items: center;
+    text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+    /* Eliminating button bacground */
+	color: #FFFFFF;
+	border: none;
+	background: none;
+}
+
+.howToMenuBtnClass {
+    position: absolute;
+    width: 75px;
+    height: 19px;
+    margin-left: 156px;
+	/* Text properties */
+	font-family: Rubik;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 19px;
+	display: flex;
+    align-items: center;
+    text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+    /* Eliminating button bacground */
+	color: #FFFFFF;
+	border: none;
+	background: none;
+}
+
+.faqsMenuBtnClass {
+    position: absolute;
+    width: 56px;
+    height: 19px;
+    margin-left: 325px;
+	/* Text properties */
+	font-family: Rubik;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 19px;
+	display: flex;
+    align-items: center;
+    text-align: center;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+    /* Eliminating button bacground */
+	color: #FFFFFF;
+	border: none;
+	background: none;
+}
+/*** Footer Note ***/
+.footerNoteClass {
+    position: absolute;
+    width: 465px;
+    height: 40px;
+    margin-left: 348px;
+    margin-top: 869.82px;
+    /* text */
+    font-family: RubikNormal;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #402B2B;
+}
+/***** Social Media Links *****/
+.footerSocialLinksClass {
+    position: absolute;
+    width: 170px;
+    height: 36px;
+    margin-left: 1203px;
+    margin-top: 871.82px;
+    padding-bottom: 25px;
+}
+
+.facebookLinkClass {
+    position: absolute;
+}
+
+.twitterLinkClass {
+    position: absolute;
+    margin-left: 67px;
+}
+
+.instagramLinkClass {
+    position: absolute;
+    margin-left: 134px;
+}
