@@ -36,6 +36,9 @@
 	border: none;
 	background: none;
 }
+.aboutMenuBtn:hover {
+	color: #978888;
+}
 
 .howToMenuBtn {
 	position: absolute;
@@ -58,6 +61,9 @@
 	border: none;
 	background: none;
 }
+.howToMenuBtn:hover {
+	color: #978888;
+}
 
 .faqsMenuBtn {
 	position: absolute;
@@ -79,6 +85,9 @@
 	color: #FFFFFF;
 	border: none;
 	background: none;
+}
+.faqsMenuBtn:hover {
+	color: #978888;
 }
 
 .contactMenuBtn {

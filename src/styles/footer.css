@@ -226,6 +226,9 @@
 	border: none;
 	background: none;
 }
+.aboutMenuBtnClass:hover {
+    color: #978888;
+}
 
 .howToMenuBtnClass {
     position: absolute;
@@ -248,6 +251,9 @@
 	border: none;
 	background: none;
 }
+.howToMenuBtnClass:hover {
+    color: #978888;
+}
 
 .faqsMenuBtnClass {
     position: absolute;
@@ -269,6 +275,9 @@
 	color: #FFFFFF;
 	border: none;
 	background: none;
+}
+.faqsMenuBtnClass:hover {
+    color: #978888;
 }
 /*** Footer Note ***/
 .footerNoteClass {
