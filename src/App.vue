@@ -1,10 +1,10 @@
 <template>
 	<div id="app">
-		<TopOfPage @goto="goto"/>
-		<AboutPart @reference="getReference"/>
-		<HowToPart @reference="getReference"/>
+		<TopOfPage :scrollY="scrollY" @goto="goto"/>
+		<AboutPart :scrollY="scrollY" @reference="getReference"/>
+		<HowToPart :scrollY="scrollY" @reference="getReference"/>
 		<Faqs @reference="getReference"/>
-		<Footer @reference="getReference" @goto="goto"/>
+		<Footer :scrollY="scrollY" @reference="getReference" @goto="goto"/>
 	</div>
 </template>
 
@@ -19,8 +19,14 @@ export default {
 	name: 'App',
 	data() {
 		return {
-			references: []
+			references: [],
+			scrollY: 0,
 		}
+	},
+	created() {
+		window.addEventListener('scroll', () => {
+			this.scrollY = window.scrollY;
+		});
 	},
 	methods: {
 		/* Get the ref from a component */
