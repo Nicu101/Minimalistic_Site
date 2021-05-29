@@ -1,11 +1,26 @@
-
+/*** Image car position and animation ***/
 .aboutUsImg {
     position: absolute;
     width: 575.12px;
     height: 480px;
     margin-left: 595px;
 }
-
+.aboutRunIn-enter-active {
+	animation: about-run-in;
+	animation-duration: 3s;
+}
+.aboutRunIn-leave-active {
+	animation: about-run-in 0.5s reverse;
+}
+@keyframes about-run-in {
+	0% {
+		margin-left: 100%;
+	}
+	100% {
+		margin-left: 0%;
+	}
+}
+/*** Text ***/
 .aboutTextBox {
     position: absolute;
     width: 570px;

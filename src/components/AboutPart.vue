@@ -1,8 +1,10 @@
 <template>
 	<div class="about" ref="about">
         <div class="aboutUsImg">
-			<img src="../assets/aboutUs/Illustration.png"/>
-		</div>
+            <transition name="aboutRunIn">
+                <img v-if="animate" src="../assets/aboutUs/Illustration.png"/>
+            </transition>
+        </div>
         <div class="aboutTextBox">
             <p class="aboutTitle">
                 ABOUT US
@@ -25,10 +27,23 @@
 <script>
 export default {
 	name: 'AboutPart',
+    props: {
+        scrollY: Number
+    },
 	mounted() {
 		// Send the reference to the parent
 		this.$emit('reference', 'about', this.$refs['about']);
-	}
+	},
+    computed: {
+        animate() {
+            console.log(this.scrollY);
+            if (this.scrollY > 550) {
+				return true;
+			} else {
+				return false;
+			}
+        }
+    }
 }
 </script>
 
