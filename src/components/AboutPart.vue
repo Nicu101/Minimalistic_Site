@@ -36,7 +36,6 @@ export default {
 	},
     computed: {
         animate() {
-            console.log(this.scrollY);
             if (this.scrollY > 550) {
 				return true;
 			} else {
