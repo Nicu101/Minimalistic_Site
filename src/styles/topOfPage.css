@@ -172,7 +172,23 @@
 	margin-left: 24px;
 	motion-rotation: 0deg;
 }
-
+/*** Model car position and animation ***/
 .modelTopCar {	
-	margin-top: 180.81px;
+	margin-top: 186.81px;
+}
+
+.rollIn-enter-active {
+	animation: roll-in;
+	animation-duration: 3s;
+}
+.rollIn-leave-active {
+	animation: roll-in 0.5s reverse;
+}
+@keyframes roll-in {
+	0% {
+		margin-left: -600px;
+	}
+	100% {
+		margin-left: 0px;
+	}
 }

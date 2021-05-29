@@ -18,8 +18,10 @@
 				<img class="GetStartedBtnImg" src="../assets/top/union.png"/>
 			</button>
 		</div>
-		<div v-if="animate">
-			<img class="modelTopCar" src="../assets/top/mobelTopCar.png"/>
+		<div class="modelTopCar">
+			<transition name="rollIn">
+				<img v-if="animate" src="../assets/top/mobelTopCar.png"/>
+			</transition>
 		</div>
 	</div>
 </template>
@@ -39,10 +41,10 @@ export default {
 	},
 	computed: {
 		animate() {
-			if (this.scrollY > 100) {
-				return false;
-			} else {
+			if (this.scrollY > 50) {
 				return true;
+			} else {
+				return false;
 			}
 		}
 	},
