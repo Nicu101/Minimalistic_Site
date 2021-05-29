@@ -19,7 +19,7 @@
 			</button>
 		</div>
 		<div class="modelTopCar">
-			<transition name="rollIn">
+			<transition name="topRunIn">
 				<img v-if="animate" src="../assets/top/mobelTopCar.png"/>
 			</transition>
 		</div>
@@ -29,15 +29,8 @@
 <script>
 export default {
 	name: 'TopOfPage',
-	data() {
-		return {
-			scrollY: 0,
-		}
-	},
-	created() {
-		window.addEventListener('scroll', () => {
-			this.scrollY = window.scrollY;
-		});
+	props: {
+		scrollY: Number
 	},
 	computed: {
 		animate() {

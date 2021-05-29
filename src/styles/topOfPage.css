@@ -177,14 +177,14 @@
 	margin-top: 186.81px;
 }
 
-.rollIn-enter-active {
-	animation: roll-in;
+.topRunIn-enter-active {
+	animation: top-run-in;
 	animation-duration: 3s;
 }
-.rollIn-leave-active {
-	animation: roll-in 0.5s reverse;
+.topRunIn-leave-active {
+	animation: top-run-in 0.5s reverse;
 }
-@keyframes roll-in {
+@keyframes top-run-in {
 	0% {
 		margin-left: -600px;
 	}
