@@ -1,8 +1,31 @@
-/***** Treckmobil and his Surroundings *****/
+/***** Treckmobil *****/
 .footerImgBoxClass {
     position: absolute;
     width: 489.2px;
     height: 209.48px;
+}
+.footerRunIn-enter-active {
+    animation: footer-run-in;
+	animation-duration: 1.8s;
+}
+.footerRunIn-leave-active {
+    animation: footer-run-in 0.5s reverse;
+}
+@keyframes footer-run-in {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+/***** Treckmobil surroundings *****/
+.trekmobilBackgroundImg2 {
+    position: absolute;
+    width: 131.03px;
+    height: 93.23px;
+    margin-left: 105px;
+    margin-top: 112.8px;
 }
 
 .trekmobilBackgroundImg1 {
@@ -11,14 +34,6 @@
     height: 94.38px;
     margin-left: 299.72px; /* 186.72px; */
     margin-top: 93.23px;
-}
-
-.trekmobilBackgroundImg2 {
-    position: absolute;
-    width: 131.03px;
-    height: 93.23px;
-    margin-left: 105px;
-    margin-top: 112.8px;
 }
 
 .treckmobilImgClass {

@@ -3,7 +3,11 @@
         <img class="backgroundImgClass" src="../assets/footer/Vector13.png"/>
         <div class="footerImgBoxClass">
             <img class="trekmobilBackgroundImg1" src="../assets/footer/Vector.png"/>
-            <img class="treckmobilImgClass" src="../assets/footer/trekmobil.png"/>
+            <div class="treckmobilImgClass">
+                <transition name="footerRunIn">
+                    <img v-if="animate" src="../assets/footer/trekmobil.png"/>
+                </transition>
+            </div>
             <img class="trekmobilBackgroundImg2" src="../assets/footer/Vector2.png"/>
 		</div>
         <div class="footerBoxClass">
@@ -47,14 +51,27 @@
 <script>
 export default {
 	name: 'Footer',
+    props: {
+        scrollY: scrollY
+    },
 	mounted() {
 		// Send the reference to the parent
         this.$emit('reference', 'footer', this.$refs['footer']);
 	},
-    data: function() {
+    data() {
         return {
             name: '',
             email: '',
+        }
+    },
+    computed: {
+        animate() {
+            console.log(this.scrollY);
+            if (this.scrollY > 3750) {
+				return true;
+			} else {
+				return false;
+			}
         }
     },
     methods: {
