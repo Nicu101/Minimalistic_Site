@@ -60,7 +60,11 @@ export default {
     methods: {
         getStarted() {
             //do somenthing?
-            alert("Nothings can be done this way!");
+            if (this.name === '') {
+                alert("Nothings can be done this way, Hendrik Larsson!");
+            } else {
+                alert("Nothings can be done this way, " + this.name + "!");
+            }
         },
         goto(refName) {
             this.$emit('goto', refName);
