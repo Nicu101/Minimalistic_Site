@@ -18,7 +18,7 @@
 				<img class="GetStartedBtnImg" src="../assets/top/union.png"/>
 			</button>
 		</div>
-		<div>
+		<div v-if="animate">
 			<img class="modelTopCar" src="../assets/top/mobelTopCar.png"/>
 		</div>
 	</div>
@@ -27,6 +27,25 @@
 <script>
 export default {
 	name: 'TopOfPage',
+	data() {
+		return {
+			scrollY: 0,
+		}
+	},
+	created() {
+		window.addEventListener('scroll', () => {
+			this.scrollY = window.scrollY;
+		});
+	},
+	computed: {
+		animate() {
+			if (this.scrollY > 100) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+	},
 	methods: {
 		goto(refName) {
 			this.$emit('goto', refName);
