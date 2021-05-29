@@ -1,7 +1,9 @@
  <template>
 	<div class="howTo" ref="howToApply">
         <div class="howToImg">
-			<img src="../assets/howTo/illustrations.png"/>
+            <transition name="howToRunIn">
+                <img v-if="animate" src="../assets/howTo/illustrations.png"/>
+            </transition>
 		</div>
         <div>
             <p class="howToTitle">
@@ -19,11 +21,23 @@
 <script>
 export default {
 	name: 'HowToPart',
+    props: {
+        scrollY: scrollY
+    },
 	mounted() {
         // Send the reference to the parent
 		this.$emit('reference', 'howToApply', this.$refs['howToApply']);
-	}
-
+	},
+    computed: {
+        animate() {
+            console.log(this.scrollY);
+            if (this.scrollY > 1300) {
+				return true;
+			} else {
+				return false;
+			}
+        }
+    },
 }
 </script>
 

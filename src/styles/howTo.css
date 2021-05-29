@@ -1,9 +1,25 @@
+/*** Image position and animation ***/
 .howToImg {
     position: absolute;
     width: 720.52px;
     height: 679.39px;
 }
-
+.howToRunIn-enter-active {
+    animation: howTo-run-in;
+	animation-duration: 2.3s;
+}
+.howToRunIn-leave-active {
+    animation: howTo-run-in 0.5s reverse;
+}
+@keyframes howTo-run-in {
+	0% {
+		margin-left: -100%;
+	}
+	100% {
+		margin-left: 0;
+	}
+}
+/*** Text ***/
 .howToTitle {
     position: absolute;
     width: 265px;
