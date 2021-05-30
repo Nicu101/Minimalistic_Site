@@ -1,5 +1,7 @@
 # minimalisticsite
 
+## The site can be seen at: https://onepagesite.netlify.app/
+
 ## Project setup
 ```
 npm install
