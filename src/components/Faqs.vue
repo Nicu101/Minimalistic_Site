@@ -11,12 +11,56 @@
                 Questions and Answers on Professional Traffic Permits:
             </p>
         </div>
+        <div class="questionBoxClass">
+            <v-expansion-panels accordion>
+                <v-expansion-panel>
+                    <v-expansion-panel-header>{{example.question}}</v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                        {{example.answ}}
+                    </v-expansion-panel-content>
+                </v-expansion-panel>
+            </v-expansion-panels>
+        </div>
 	</div>
 </template>
 
 <script>
 export default {
 	name: 'Faqs',
+    data() {
+        return {
+            example: {
+                question: "What is a professional traffic permit?",
+                answ: "Traffic permits are a requirement for conducting professional traffic."
+            },
+            rowOne : [
+                { question: "How to check the traffic condition?",
+                    answ: ""},
+                { question: "What are the requirements for a professional traffic permit?",
+                    answ: ""},
+                { question: "Are there professional traffic permit training courses at a distance?",
+                    answ: ""}
+            ],
+            rowTwo : [
+                { question: "When is a professional traffic permit needed?",
+                    answ: ""},
+                { question: "Where to look for a traffic permit?",
+                    answ: ""},
+                { question: "Are there differences between a traffic permit and a professional traffic permit?",
+                    answ: ""},
+                { question: "How much does a commercial traffic permit cost for goods?",
+                    answ: ""},
+                { question: "How to plug in for the traffic permit test?",
+                    answ: ""},
+                { question: "How is the sample for a professional traffic permit booked?",
+                    answ: ""}
+            ],
+            moreInfo: [
+                { question: "", answ: ""},
+                { question: "", answ: ""}
+            ]
+        }
+    },
 	mounted() {
         // Send the reference to the parent
         this.$emit('reference', 'faqs', this.$refs['faqs']);
@@ -87,6 +131,13 @@ export default {
     line-height: 140%;
 
     color: #402B2B;
+}
+
+.questionBoxClass {
+    position: absolute;
+    width: 1120px;
+    height: 812px;
+    margin-top: 688px;
 }
 
 </style>
