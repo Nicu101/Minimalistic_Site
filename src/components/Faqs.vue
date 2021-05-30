@@ -16,7 +16,7 @@
                 v-model="panel"
                 :flat="true"
                 >
-                <v-expansion-panel>
+                <v-expansion-panel class="noBackground">
                     <v-expansion-panel-header class="panelClickedHeaderClass"
                         hide-actions
                         disabled
@@ -33,7 +33,10 @@
                 :flat="true"
                 >
                 <div class="gridClass">
-                    <v-expansion-panel v-for="info in rowOne" :key="info.question">
+                    <v-expansion-panel
+                        v-for="info in rowOne" :key="info.question"
+                        class="noBackground"
+                        >
                         <v-expansion-panel-header :class="info.class"
                             @click="panelHeaderClassForRow1(info)"
                             hide-actions
@@ -53,7 +56,10 @@
                 :flat="true"
                 >
                 <div class="gridClass">
-                    <v-expansion-panel v-for="info in rowTwo" :key="info.question">
+                    <v-expansion-panel
+                        v-for="info in rowTwo" :key="info.question"
+                        class="noBackground"
+                        >
                         <v-expansion-panel-header
                             :class="info.class"
                             @click="panelHeaderClassForRow2(info)"
@@ -64,6 +70,17 @@
                         <v-expansion-panel-content class="panelContentClass">
                             {{info.answ}}
                         </v-expansion-panel-content>
+                    </v-expansion-panel>
+
+                    <v-expansion-panel :class="loadPanelClass"
+                        >
+                        <div class="loadPanelTextClass">{{message}}</div>
+                        <v-expansion-panel-header
+                            class="panelLoadClass"
+                            hide-actions
+                            @click="loadMoreQuestions()"
+                            >
+                        </v-expansion-panel-header>
                     </v-expansion-panel>
                 </div>
             </v-expansion-panels>
@@ -121,9 +138,15 @@ export default {
                     class: 'panelHeaderClass'
                     }
             ],
+            message: 'LOAD MORE',
+            loadPanelClass: 'customBackgroundOneClass',
             moreInfo: [
-                { question: "", answ: "", open: false},
-                { question: "", answ: "", open: false}
+                { question: "What should you do?",
+                    answ: "Contact me for more information.",
+                    class: 'panelHeaderClass'},
+                { question: "When should you do it?",
+                    answ: "At your earliest convenience.",
+                    class: 'panelHeaderClass'}
             ]
         }
     },
@@ -164,6 +187,23 @@ export default {
                         this.rowTwo[i].class = 'panelHeaderClass';
                     }
                 }
+            }
+        },
+        loadMoreQuestions() {
+            if (this.loadPanelClass === 'customBackgroundOneClass') {
+                // load data in the arrays
+                this.rowOne.push(this.moreInfo[0]);
+                this.rowTwo.push(this.moreInfo[1]);
+
+                this.message = 'SHOW LESS'
+                this.loadPanelClass = 'customBackgroundTwoClass'
+            } else {
+                // erase data from the arrays
+                this.rowOne = this.rowOne.filter(row => row.question != this.moreInfo[0].question);
+                this.rowTwo = this.rowTwo.filter(row => row.question != this.moreInfo[1].question);
+
+                this.message = 'LOAD MORE'
+                this.loadPanelClass = 'customBackgroundOneClass'
             }
         }
     }
@@ -263,7 +303,11 @@ export default {
     height: 50px;
     padding-bottom: 50px;
 }
-
+/*** Panel properties ***/
+.noBackground {
+    background: #FFFFFF;
+    border-radius: 10px;
+}
 .panelHeaderClass {
     width: 550px;
     height: 90px;
@@ -322,4 +366,51 @@ export default {
     text-align: left;
     color: #402B2B;
 }
+/*** Load Panel ***/
+.panelLoadClass {
+    width: 550px;
+    height: 90px;
+    /* Box proprieties */
+    background: #ED4D47;
+    opacity: 0.3;
+    border-radius: 10px;
+}
+.customBackgroundOneClass {
+    margin-top: 10px;
+    border-radius: 10px;
+    border-top: none;
+
+    background-image: url("../assets/faqs/Rectangle.png"), url("../assets/faqs/Rectangle2.png");
+    background-repeat: no-repeat;
+    background-position-x: 495px, 504px;
+    background-position-y: 44px, 35px;
+}
+.customBackgroundTwoClass {
+    margin-top: 13px;
+    border-radius: 10px;
+    border-top: none;
+
+    background-image: url("../assets/faqs/Rectangle.png");
+    background-repeat: no-repeat;
+    background-position-x: 495px;
+    background-position-y: 44px;
+}
+
+.loadPanelTextClass {
+    position: absolute;
+    width: 112px;
+    height: 30px;
+    margin-left: 219px;
+    margin-top: 30px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ED4D47;
+}
+
 </style>
