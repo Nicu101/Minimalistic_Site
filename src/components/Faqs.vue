@@ -212,7 +212,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* @import '../styles/howTo.css'; */
+@import '../styles/faqs.css';
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 @font-face {
@@ -234,80 +235,6 @@ export default {
     background-position-x: 190px;
 }
 
-.faqsImgClass {
-    position: absolute;
-    width: 708px;
-    height: 490.57px;
-    margin-left: 475px;
-    margin-top: 107.65px;
-}
-/*** Text ***/
-.faqsTitleClass {
-    position: absolute;
-    width: 166px;
-    height: 50px;
-    margin-top: 224px;
-    /* text */
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 40px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.1em;
-
-    color: #EE4D47;
-}
-
-.faqsTextClass {
-    position: absolute;
-    width: 550px;
-    height: 200px;
-    margin-top: 318.16px;
-    /* text */
-    font-family: DmSerifDisplay;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: 140%;
-
-    color: #402B2B;
-}
-/*** Question Section ***/
-.questionBox1Class {
-    position: absolute;
-    width: 550px;
-    height: 812px;
-    margin-top: 688px;
-
-    border: none;
-	background: none;
-}
-.questionBox2Class {
-    position: absolute;
-    width: 550px;
-    height: 812px;
-    margin-top: 688px;
-    margin-left: 570px;
-
-    border: none;
-	background: none;
-}
-.gridClass {
-    display: grid;
-    row-gap: 10px;
-}
-.whiteSpaceClass {
-    width: 550px;
-    height: 50px;
-    padding-bottom: 50px;
-}
-/*** Panel properties ***/
-.noBackground {
-    background: #FFFFFF;
-    border-radius: 10px;
-}
 .panelHeaderClass {
     width: 550px;
     height: 90px;
@@ -333,48 +260,6 @@ export default {
     background-position-y: 44px;
 }
 
-.headerTextClass {
-    position: absolute;
-    width: 400px;
-    height: 40px;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    color: #402B2B;
-}
-
-.panelContentClass {
-    width: 550px;
-    height: 160px;
-    /* Box proprieties */
-    background: #FFF7F5;
-    box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
-    border-radius: 10px;
-    /* text */
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    color: #402B2B;
-}
-/*** Load Panel ***/
-.panelLoadClass {
-    width: 550px;
-    height: 90px;
-    /* Box proprieties */
-    background: #ED4D47;
-    opacity: 0.3;
-    border-radius: 10px;
-}
 .customBackgroundOneClass {
     margin-top: 10px;
     border-radius: 10px;
@@ -395,22 +280,4 @@ export default {
     background-position-x: 495px;
     background-position-y: 44px;
 }
-
-.loadPanelTextClass {
-    position: absolute;
-    width: 112px;
-    height: 30px;
-    margin-left: 219px;
-    margin-top: 30px;
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #ED4D47;
-}
-
 </style>
