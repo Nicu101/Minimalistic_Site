@@ -182,8 +182,8 @@
 .GetStartedBtnTextClass {
     width: 120px;
     height: 19px;
-    margin-left: 23px;
-    margin-top: 18px;
+    margin-left: 25px;
+    
     /* text */
     font-family: Rubik;
     font-style: normal;
@@ -204,7 +204,7 @@
     width: 29.5px;
     height: 12.35px;
     margin-left: 56px;
-    margin-top: -33px;
+    margin-top: -16px;
 }
 /*** Img Logo ***/
 .footerLogoClass {
