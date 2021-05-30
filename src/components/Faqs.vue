@@ -11,14 +11,61 @@
                 Questions and Answers on Professional Traffic Permits:
             </p>
         </div>
-        <div class="questionBoxClass">
-            <v-expansion-panels accordion>
+        <div class="questionBox1Class">
+            <v-expansion-panels
+                v-model="panel"
+                :flat="true"
+                >
                 <v-expansion-panel>
-                    <v-expansion-panel-header>{{example.question}}</v-expansion-panel-header>
-                    <v-expansion-panel-content>
+                    <v-expansion-panel-header class="panelClickedHeaderClass"
+                        hide-actions
+                        disabled
+                        >
+                        <p class="headerTextClass">{{example.question}}</p>
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content class="panelContentClass">
                         {{example.answ}}
                     </v-expansion-panel-content>
                 </v-expansion-panel>
+            </v-expansion-panels>
+            <div class="whiteSpaceClass"/>
+            <v-expansion-panels
+                :flat="true"
+                >
+                <div class="gridClass">
+                    <v-expansion-panel v-for="info in rowOne" :key="info.question">
+                        <v-expansion-panel-header :class="info.class"
+                            @click="panelHeaderClassForRow1(info)"
+                            hide-actions
+                            >
+                            <p class="headerTextClass">{{info.question}} </p>
+                        </v-expansion-panel-header>
+                        <v-expansion-panel-content class="panelContentClass">
+                            {{info.answ}}
+                        </v-expansion-panel-content>
+                    </v-expansion-panel>
+                </div>
+            </v-expansion-panels>
+        </div>
+
+        <div class="questionBox2Class">
+            <v-expansion-panels
+                :flat="true"
+                >
+                <div class="gridClass">
+                    <v-expansion-panel v-for="info in rowTwo" :key="info.question">
+                        <v-expansion-panel-header
+                            :class="info.class"
+                            @click="panelHeaderClassForRow2(info)"
+                            hide-actions
+                            >
+                            <p class="headerTextClass">{{info.question}} </p>
+                        </v-expansion-panel-header>
+                        <v-expansion-panel-content class="panelContentClass">
+                            {{info.answ}}
+                        </v-expansion-panel-content>
+                    </v-expansion-panel>
+                </div>
             </v-expansion-panels>
         </div>
 	</div>
@@ -29,49 +76,104 @@ export default {
 	name: 'Faqs',
     data() {
         return {
+            panel: 0,
             example: {
                 question: "What is a professional traffic permit?",
                 answ: "Traffic permits are a requirement for conducting professional traffic."
             },
             rowOne : [
                 { question: "How to check the traffic condition?",
-                    answ: ""},
+                    answ: "",
+                    class: 'panelHeaderClass'
+                    },
                 { question: "What are the requirements for a professional traffic permit?",
-                    answ: ""},
+                    answ: "",
+                    class: 'panelHeaderClass'
+                    },
                 { question: "Are there professional traffic permit training courses at a distance?",
-                    answ: ""}
+                    answ: "",
+                    class: 'panelHeaderClass'
+                    }
             ],
             rowTwo : [
                 { question: "When is a professional traffic permit needed?",
-                    answ: ""},
+                    answ: "",
+                    class: 'panelHeaderClass'
+                    },
                 { question: "Where to look for a traffic permit?",
-                    answ: ""},
+                    answ: "",
+                    class: 'panelHeaderClass'
+                    },
                 { question: "Are there differences between a traffic permit and a professional traffic permit?",
-                    answ: ""},
+                    answ: "",
+                    class: 'panelHeaderClass'
+                    },
                 { question: "How much does a commercial traffic permit cost for goods?",
-                    answ: ""},
+                    answ: "",
+                    class: 'panelHeaderClass'
+                    },
                 { question: "How to plug in for the traffic permit test?",
-                    answ: ""},
+                    answ: "",
+                    class: 'panelHeaderClass'
+                    },
                 { question: "How is the sample for a professional traffic permit booked?",
-                    answ: ""}
+                    answ: "",
+                    class: 'panelHeaderClass'
+                    }
             ],
             moreInfo: [
-                { question: "", answ: ""},
-                { question: "", answ: ""}
+                { question: "", answ: "", open: false},
+                { question: "", answ: "", open: false}
             ]
         }
     },
 	mounted() {
         // Send the reference to the parent
         this.$emit('reference', 'faqs', this.$refs['faqs']);
-	}
+	},
+    methods: {
+        panelHeaderClassForRow1(event) {
+            if (event.class === 'panelHeaderClass') {
+                for (let i = 0; i < this.rowOne.length; i++) {
+                    if (this.rowOne[i].question === event.question) {
+                        this.rowOne[i].class = 'panelClickedHeaderClass';
+                    } else {
+                        this.rowOne[i].class = 'panelHeaderClass';
+                    }
+                }
+            } else {
+                for (let i = 0; i < this.rowOne.length; i++) {
+                    if (this.rowOne[i].question === event.question) {
+                        this.rowOne[i].class = 'panelHeaderClass';
+                    }
+                }
+            }
+        },
+        panelHeaderClassForRow2(event) {
+            if (event.class === 'panelHeaderClass') {
+                for (let i = 0; i < this.rowTwo.length; i++) {
+                    if (this.rowTwo[i].question === event.question) {
+                        this.rowTwo[i].class = 'panelClickedHeaderClass';
+                    } else {
+                        this.rowTwo[i].class = 'panelHeaderClass';
+                    }
+                }
+            } else {
+                for (let i = 0; i < this.rowTwo.length; i++) {
+                    if (this.rowTwo[i].question === event.question) {
+                        this.rowTwo[i].class = 'panelHeaderClass';
+                    }
+                }
+            }
+        }
+    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /* @import '../styles/howTo.css'; */
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 @font-face {
 	font-family: DmSerifDisplay;
@@ -99,7 +201,7 @@ export default {
     margin-left: 475px;
     margin-top: 107.65px;
 }
-
+/*** Text ***/
 .faqsTitleClass {
     position: absolute;
     width: 166px;
@@ -132,12 +234,92 @@ export default {
 
     color: #402B2B;
 }
-
-.questionBoxClass {
+/*** Question Section ***/
+.questionBox1Class {
     position: absolute;
-    width: 1120px;
+    width: 550px;
     height: 812px;
     margin-top: 688px;
+
+    border: none;
+	background: none;
+}
+.questionBox2Class {
+    position: absolute;
+    width: 550px;
+    height: 812px;
+    margin-top: 688px;
+    margin-left: 570px;
+
+    border: none;
+	background: none;
+}
+.gridClass {
+    display: grid;
+    row-gap: 10px;
+}
+.whiteSpaceClass {
+    width: 550px;
+    height: 50px;
+    padding-bottom: 50px;
 }
 
+.panelHeaderClass {
+    width: 550px;
+    height: 90px;
+    /* Box proprieties */
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px 0px rgba(238, 77, 71, 0.1);
+    border-radius: 10px;
+    background-image: url("../assets/faqs/Rectangle.png"), url("../assets/faqs/Rectangle2.png");
+    background-repeat: no-repeat;
+    background-position-x: 495px, 504px;
+    background-position-y: 44px, 35px;
+}
+.panelClickedHeaderClass {
+    width: 550px;
+    height: 90px;
+    /* Box proprieties */
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px 0px rgba(238, 77, 71, 0.1);
+    border-radius: 10px;
+    background-image: url("../assets/faqs/Rectangle.png");
+    background-repeat: no-repeat;
+    background-position-x: 495px;
+    background-position-y: 44px;
+}
+
+.headerTextClass {
+    position: absolute;
+    width: 400px;
+    height: 40px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: #402B2B;
+}
+
+.panelContentClass {
+    width: 550px;
+    height: 160px;
+    /* Box proprieties */
+    background: #FFF7F5;
+    box-shadow: 0px 20px 40px rgba(238, 77, 71, 0.1);
+    border-radius: 10px;
+    /* text */
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: #402B2B;
+}
 </style>
