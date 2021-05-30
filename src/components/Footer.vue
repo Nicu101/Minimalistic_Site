@@ -65,7 +65,7 @@ export default {
         }
     },
     computed: {
-        animate() {
+        animate() { 
             if (this.scrollY > 3750) {
 				return true;
 			} else {
