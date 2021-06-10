@@ -1,7 +1,7 @@
 <template>
 	<div class="top">
-		<div class="topLogoImg">
-			<img src="../assets/top/topLogoImg.png"/>
+		<div class="topLogoImgClass">
+			<img class="ajustImgClass" src="../assets/top/topLogoImg.png"/>
 		</div>
 		<div class="topMenuBar">
 			<button class="aboutMenuBtn" @click="goto('about')"> ABOUT </button>
@@ -20,7 +20,7 @@
 		</div>
 		<div class="modelTopCar">
 			<transition name="topRunIn">
-				<img v-if="animate" src="../assets/top/mobelTopCar.png"/>
+				<img class="modelImgClass" v-if="animate" src="../assets/top/mobelTopCar.png"/>
 			</transition>
 		</div>
 	</div>
@@ -34,7 +34,7 @@ export default {
 	},
 	computed: {
 		animate() {
-			if (this.scrollY > 50) {
+			if (this.scrollY > 0) {
 				return true;
 			} else {
 				return false;
@@ -65,13 +65,14 @@ export default {
 
 .top {
 	position: absolute;
-	width: 1734px;
-	height: 1005.12px;
+	width: 118.5%;
+	height: 121%;
 	margin-top: -14px;
 	margin-left: -8px;
 
 	mix-blend-mode: normal;
 	background-image: url("../assets/top/topBackgroundImg.png");
 	background-repeat: no-repeat;
+	background-size: 89% 100%;
 }
 </style>

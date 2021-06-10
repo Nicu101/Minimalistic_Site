@@ -1,31 +1,37 @@
-.topLogoImg {
+.topLogoImgClass {
 	position: absolute;
-	width: 212px;
-	height: 50px;
-	margin-top: 50px;
-	margin-left: 240px;
+	width: 11%;
+	min-width: 100px;
+	/* height: 5.25%; */
+	margin-top: 2.78%;
+	margin-left: 13.35%;
 
 	fill: Solid #FFFFFF;
 }
 
+.ajustImgClass {
+	width: 100%;
+	height: 100%;
+}
+
 .topMenuBar {
 	position: absolute;
-	width: 604px;
-	height: 60px;
-	margin-top: 50px;
-	margin-left: 744px;
+	width: 31.85%;
+	height: 4.8%;
+	margin-top: 2.78%;
+	margin-left: 41.35%;
 }
 
 .aboutMenuBtn {
 	position: absolute;
-	width: 59px;
-	height: 19px;
-	margin-top: 11px;
+	width: 9.76%;
+	height: 31.66%;
+	margin-top: 2.85%;
 	/* Text properties */
 	font-family: Rubik;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 16px;
+	font-size: 2.1vh;
 	line-height: 19px;
 	line-height: 100%;
 	letter-spacing: 5%;
@@ -42,15 +48,15 @@
 
 .howToMenuBtn {
 	position: absolute;
-	width: 75px;
-	height: 19px;
-	margin-top: 11px;
-	margin-left: 156px;
+	width: 12.41%;
+	height: 31.66%;
+	margin-top: 2.85%;
+	margin-left: 29%;
 	/* Text properties */
 	font-family: Rubik;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 16px;
+	font-size: 2.1vh;
 	line-height: 19px;
 	line-height: 100%;
 	letter-spacing: 5%;
@@ -67,15 +73,15 @@
 
 .faqsMenuBtn {
 	position: absolute;
-	width: 59px;
-	height: 19px;
-	margin-top: 11px;
-	margin-left: 325px;
+	width: 9.76%;
+	height: 31.66%;
+	margin-top: 2.85%;
+	margin-left: 55%;
 	/* Text properties */
 	font-family: Rubik;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 16px;
+	font-size: 2.1vh;
 	line-height: 19px;
 	line-height: 100%;
 	letter-spacing: 5%;
@@ -92,15 +98,15 @@
 
 .contactMenuBtn {
 	position: absolute;
-	width: 158px;
-	height: 55px;
-	margin-left: 446px;
+	width: 28%;
+	height: 100%;
+	margin-left: 80%;
 	/* Text properties */
 	font-family: Rubik;
 	font-weight: 700;
 	font-style: normal;
-	font-size: 16px;
-	line-height: 19px;
+	font-size: 1.4vh;
+	line-height: 2vh;
 	line-height: 100%;
 	letter-spacing: 5%;
 	letter-spacing: 1.5px;
@@ -119,16 +125,15 @@
 
 .topTextBox {
 	position: absolute;
-	width: 741px;
-	height: 300px;
-	margin-top: 190px;
-	margin-left: 240px;
+	width: 39%;
+	height: 24%;
+	margin-top: 24vh/* 10.6% */;
+	margin-left: 13.35%;
 	color: #FFFFFF;
 	font-family: DmSerifDisplay;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 100px;
-	line-height: 100px;
+	font-size: 6.52vw;
 	line-height: 100%;
 	align-content: Left;
 	vertical-align: center;
@@ -137,11 +142,11 @@
 }
 
 .GetStartedBtn {
-	width: 220px;
-	height: 60px;
 	position: relative;
-	margin-top: 550px;
-	margin-left: 240px;
+	width: 13.5%;
+	height: 60px;
+	margin-top: 69.25vh;/* 30.5%; */
+	margin-left: 13.35%;
 	
 	color: #FFFFFF;
 	background-color: #EE4D47;
@@ -157,7 +162,7 @@
 	font-family: Rubik;
 	font-weight: 700;
 	font-style: bold;
-	font-size: 16px;
+	font-size: 2vh;
 	align-content: left;
 	line-height: 18.9px;
 	line-height: 100%;
@@ -169,12 +174,17 @@
 .GetStartedBtnImg {
 	width: 29.5px;
 	height: 12.35px;
-	margin-left: 24px;
+	margin-left: 5%;
 	motion-rotation: 0deg;
 }
 /*** Model car position and animation ***/
-.modelTopCar {	
-	margin-top: 186.81px;
+.modelTopCar {
+	position: absolute;
+	margin-top: 22vh/* 10.5% */;
+}
+
+.modelImgClass {
+ 	width: 39vw;
 }
 
 .topRunIn-enter-active {
@@ -182,11 +192,11 @@
 	animation-duration: 3s;
 }
 .topRunIn-leave-active {
-	animation: top-run-in 0.5s reverse;
+	animation: top-run-in 0.75s reverse;
 }
 @keyframes top-run-in {
 	0% {
-		margin-left: -600px;
+		margin-left: -100%;
 	}
 	100% {
 		margin-left: 0px;
